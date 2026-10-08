@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Replace example.com with your real domain before uploading
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://dayplans.vercel.app/sitemap.xml
