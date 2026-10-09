@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Feel Paris like never before | Travel agency for Paris and beyond</title>
+<meta name="description" content="A travel agency that plans Paris trips end to end: flights, stays and unhurried days.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#11131F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Feel Paris like never before">
+<meta property="og:description" content="Flights, stays and unhurried days in Paris, planned end to end.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","description":"Travel agency planning Paris trips and beyond: flights, stays and unhurried itineraries.","areaServed":"Paris, France"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#11131F; --sky:#2E3566; --sun:#F0B952; --cloud:#F2F0F5; --haze:#A7ACC4;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  box-sizing:border-box; color-scheme:dark;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--night);color:var(--cloud);font-family:var(--serif);font-size:1.125rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+
+/* Scroll film */
+.film{position:relative;height:950vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--night)}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.dim{position:absolute;inset:0;background:var(--night);opacity:.28;pointer-events:none}
+
+.scene{position:absolute;left:clamp(1.25rem,6vw,6rem);top:clamp(5.5rem,17vh,11rem);max-width:min(34rem,86vw);opacity:0;pointer-events:none;text-shadow:0 2px 24px rgba(8,9,18,.7)}
+.scene h1,.scene h2{margin:0 0 1rem;font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.02;font-size:clamp(2.5rem,7vw,5.75rem);text-wrap:balance}
+.scene p{margin:0;font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:30rem}
+.scene.quote h2{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;line-height:1.08}
+
+.alt{position:absolute;right:clamp(1.25rem,4vw,3rem);bottom:clamp(1.25rem,5vh,3rem);text-align:right;font-family:var(--display);text-shadow:0 2px 20px rgba(8,9,18,.7);pointer-events:none}
+.alt small{display:block;font-size:.95rem;font-weight:500;color:var(--sun)}
+.alt output{display:block;font-size:clamp(2.2rem,6vw,4.5rem);font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.hint{position:absolute;left:clamp(1.25rem,6vw,6rem);bottom:clamp(1.25rem,5vh,3rem);margin:0;font-family:var(--display);font-weight:500;font-size:1rem;opacity:.9;text-shadow:0 2px 16px rgba(8,9,18,.8)}
+.load{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--sun);transform-origin:left;transform:scaleX(0);transition:opacity .6s}
+
+@media(prefers-reduced-motion:reduce){.film{height:700vh}}
+noscript style{display:none}
+</style>
+<noscript><style>.scene{position:static;opacity:1;padding:5rem 1.5rem 0}.film{height:auto}.stage{position:static;height:auto}#cv,.dim,.alt,.hint,.load{display:none}</style></noscript>
+</head>
+<body>
+
+<main id="top">
+  <div class="film" id="film">
+    <div class="stage">
+      <canvas id="cv" role="img" aria-label="Aerial view descending from a plane window above the clouds down to the Eiffel Tower and the Seine in Paris"></canvas>
+      <div class="dim" id="dim"></div>
+
+      <section class="scene" data-a="0" data-b=".15" aria-label="Introduction">
+        <h1>Feel Paris like never before.</h1>
+        <p>We plan your flights, your stay and the mornings in between.</p>
+      </section>
+      <section class="scene" data-a=".17" data-b=".36">
+        <h2>The trip begins at 36,000 feet.</h2>
+        <p>Window seat, wing, sun on top of the cloud. We plan that part too.</p>
+      </section>
+      <section class="scene quote" data-a=".40" data-b=".58">
+        <h2>Paris is waiting under the cloud.</h2>
+      </section>
+      <section class="scene" data-a=".62" data-b=".79">
+        <h2>The Seine, the iron tower, the first morning.</h2>
+        <p>Stay in the arrondissement that suits you. We handle the bookings and leave the mornings open.</p>
+      </section>
+      <section class="scene" data-a=".82" data-b=".97">
+        <h2>Land softly. Stay long.</h2>
+      </section>
+
+      <p class="hint" id="hint">Scroll to land in Paris</p>
+      <p class="alt" aria-hidden="true"><small>Altitude</small><output id="alt">36,000 ft</output></p>
+      <div class="load" id="load"></div>
+    </div>
+  </div>
+
+</main>
+
+
+<script>
+(function(){
+var F=(function(){var a=[];for(var k=1;k<=120;k++)a.push('frames/frame-'+('00'+k).slice(-3)+'.webp');return a})();
+var N=F.length,cv=document.getElementById('cv'),cx=cv.getContext('2d'),film=document.getElementById('film');
+var dim=document.getElementById('dim'),altEl=document.getElementById('alt'),hint=document.getElementById('hint'),bar=document.getElementById('load');
+var scenes=[].slice.call(document.querySelectorAll('.scene'));
+var imgs=new Array(N),done=0,W=0,H=0,cur=0,tgt=0,raf=0;
+var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function ss(a,b,x){x=Math.min(1,Math.max(0,(x-a)/(b-a)));return x*x*(3-2*x)}
+function load(i){var im=new Image();im.onload=function(){imgs[i]=im;done++;bar.style.transform='scaleX('+done/N+')';if(done===N)bar.style.opacity=0;if(i===0||i===N-1||done===N)kick()};im.src=F[i]}
+for(var i=0;i<N;i++)load(i);
+
+function size(){var d=Math.min(devicePixelRatio||1,2);W=cv.width=Math.round(innerWidth*d);H=cv.height=Math.round(innerHeight*d);kick()}
+function pick(i){while(i>0&&!imgs[i])i--;return imgs[i]}
+function paint(im,a){if(!im)return;var s=Math.max(W/im.width,H/im.height),w=im.width*s,h=im.height*s;cx.globalAlpha=a;cx.drawImage(im,(W-w)/2,(H-h)/2,w,h)}
+function draw(f){var i=Math.floor(f),t=f-i;cx.globalAlpha=1;paint(pick(Math.min(i,N-1)),1);if(t>.01&&i+1<N&&imgs[i+1])paint(imgs[i+1],t);cx.globalAlpha=1}
+
+function read(){var r=film.getBoundingClientRect(),max=film.offsetHeight-innerHeight;tgt=Math.min(1,Math.max(0,-r.top/max))*(N-1)}
+function frame(){
+  cur+= still?(tgt-cur):(tgt-cur)*.06; if(Math.abs(tgt-cur)<.002)cur=tgt;
+  var q=cur/(N-1);
+  draw(cur);
+  dim.style.opacity=.28+.1*ss(.8,.95,q);
+  var alt=36000*(1-ss(0,.88,q));
+  altEl.textContent=(Math.round(alt/100)*100).toLocaleString('en-US')+' ft';
+  hint.style.opacity=1-ss(0,.04,q);
+  scenes.forEach(function(s){var a=+s.dataset.a,b=+s.dataset.b,w=.035;var v=ss(a-.0,a+w+.02,q)*(1-ss(b-w,b,q));if(a===0)v=1-ss(b-w,b,q);s.style.opacity=v;s.style.visibility=v<.02?'hidden':'visible';s.style.transform='translateX('+(-14*(1-v))+'px)'});
+  raf=cur!==tgt?requestAnimationFrame(frame):0;
+}
+function kick(){if(!raf)raf=requestAnimationFrame(frame)}
+addEventListener('scroll',function(){read();kick()},{passive:true});
+addEventListener('resize',function(){read();size()});
+read();cur=tgt;size();
+})();
+</script>
+</body>
+</html>
